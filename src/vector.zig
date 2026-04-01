@@ -56,6 +56,16 @@ pub fn Vector(comptime T: type, comptime N: usize) type {
             return .{ .items = @splat(item) };
         }
 
+        pub fn get(v: Vec, i: usize) T {
+            return @as([N]T, v.items)[i];
+        }
+
+        pub fn set(v: *Vec, i: usize, x: T) void {
+            var tmp = @as([N]T, v.items);
+            tmp[i] = x;
+            v.items = tmp;
+        }
+
         pub fn negate(a: Vec) Vec {
             return a.multiply(.fromScalar(-1));
         }
