@@ -1,0 +1,7 @@
+.{
+    .name = .matrix,
+    .version = "0.0.1",
+    .minimum_zig_version = "0.16.0-dev.3039+b490412cd",
+    .paths = .{""},
+    .fingerprint = 0xf83341cf8899e148,
+}
